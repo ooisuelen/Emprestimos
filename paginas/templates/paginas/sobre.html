@@ -1,0 +1,42 @@
+{% extends 'paginas/modelo.html' %}
+
+
+{% load static %}
+{%block conteudo%}
+ 
+
+
+    <h5> INSTITUTO FEDERAL DO PARANÁ – CAMPUS PARANAVAÍ CURSO TÉC. INFORMÁTICA INTEGRADO AO ENS. MÉDIO </h5> 
+    <h6>  FELIPE ORTIZ, ISABELA RIBEIRO E SUELEN ALMEIDA – 4º ANO </h6>
+
+    <img  src="{% static 'imagens/fotoGrupo.jpeg' %}" />
+
+
+
+    <h1>SISTEMA DE EMPRÉSTIMOS</h1>
+
+        <p> O nosso projeto consiste em um sistema de empréstimos de um colégio, do qual dois tipos diferentes de objetos podem
+        ser emprestados: livros didáticos ou bolas de qualquer esporte. </p>
+
+        <p> Para realizar o empréstimo, o usuário precisa ter um cadastro no sistema, do qual seus dados são inseridos pelo 
+            administrador. Os dados do usuário são: nome e sobrenome, data de nascimento, CPF, e o ID do aluno do colégio. 
+            Com essas informações, o usuário pode escolher um login e senha para realizar os empréstimos, que por sua vez devem 
+            ter a data de empréstimo e a de devolução, que será estimada pelo administrador. No ato do empréstimo, deve ser 
+            atribuído também o nome do objeto que será emprestado. O administrador pode alterar ou excluir o 
+            empréstimo e acrescentar a informação de devolução para quando um objeto for devolvido. </p> 
+
+        <p> Os objetos são divididos em categorias, que possuem os dados de ID (1 para livro, 2 para bola). Os livros possuem
+             seus próprios atributos, assim como as bolas. O administrador pode cadastrar os objetos, bem como excluir e 
+             alterar. </p>
+
+        <p> Caso o usuário não devolva os objetos no tempo de devolução estimado, ele receberá uma multa. </p>
+
+    <h2>DIAGRAMA DE CLASSES:</h2>
+    <img  src="{% static 'imagens/Diagrama de Classes.jpeg' %}" />
+
+
+    <h2>DIAGRAMA DE CASOS DE USO:</h2>
+    <img  src="{% static 'imagens/Diagrama Caso de Uso.jpeg' %}" />
+
+
+{%endblock%}
