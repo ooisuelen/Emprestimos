@@ -1,0 +1,42 @@
+{% extends 'paginas/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+<h3> Lista de perfis registrados </h3>
+<hr>
+<div class= "table-responsive">
+<table class= "table table-striped" >
+    <tr>
+       
+        <th> Nome </th>
+        <th> Descrição </th>
+        <th> Opção </th>
+    </tr>
+
+        {% for perfil in object_list %}
+        <tr>
+            
+            <td> {{ perfil.nome }} </td>
+            <td> {{ perfil.descricao }} </td>
+            <td>
+               <a href="{% url 'editar-perfil' perfil.pk %}" class = "btn btn-warning btn-sm">Editar</a>
+               <a href="{% url 'excluir-perfil' perfil.pk %}" class = "btn btn-danger btn-sm">Excluir</a>
+            </td>
+
+        </tr>
+        
+        {% empty %}
+        <tr>
+        
+            <td colspan="3"> Nenhum perfil registrado </td>
+
+        </tr>
+        {% endfor %}
+    
+</table>
+</div>
+
+
+
+{% endblock %}
