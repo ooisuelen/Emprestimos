@@ -9,16 +9,18 @@
 <table class= "table table-striped" >
     <tr>
        
-        <th> Nome </th>
-        <th> Descrição </th>
-        <th> Opção </th>
+        <th> valor </th>
+        <th> Data da multa </th>
+        <th> Pagou </th>
     </tr>
 
         {% for multa in object_list %}
         <tr>
             
-            <td> {{ multa.nome }} </td>
-            <td> {{ multa.descricao }} </td>
+            <td> {{ multa.valor }} </td>
+            <td> {{ multa.data_multa }} </td>
+            <td> {{ multa.pagou }} </td>
+
             <td>
                <a href="{% url 'editar-multa' multa.pk %}" class = "btn btn-warning btn-sm">Editar</a>
                <a href="{% url 'excluir-multa' multa.pk %}" class = "btn btn-danger btn-sm">Excluir</a>

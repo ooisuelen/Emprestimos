@@ -13,7 +13,7 @@ class Categoria(models.Model):
 
 class Objeto(models.Model):
     emprestado = models.BooleanField(default=False)
-    categoria = models.CharField(max_length=50)
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
     descricao = models.CharField(max_length=50, verbose_name="Descrição")
     informacoes_adcionais = models.CharField(max_length=50, verbose_name="Informações Adcionais")
 
