@@ -40,10 +40,18 @@ INSTALLED_APPS = [
     'paginas.apps.PaginasConfig',
     'cadastros.apps.CadastrosConfig',
     'crispy_forms',
+    'usuarios.apps.UsuariosConfig',
+
 ]
 
 # Crispy Forms 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# Nome da URL em que o usuário será redirecionado
+# https://docs.djangoproject.com/en/2.1/ref/settings/#auth
+LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'index'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

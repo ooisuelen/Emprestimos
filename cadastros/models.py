@@ -51,4 +51,4 @@ class Multa(models.Model):
     pagou = models.BooleanField(verbose_name="Pago")
 
     def __str__(self):
-        return self.valor + ' - ' + str(self.data_multa) + ' - ' + str(self.pago)
+        return self.valor + ' - ' + str(self.data_multa) + ' - ' + str(self.pagou)
